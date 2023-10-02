@@ -14,13 +14,13 @@ export function AboutMe() {
 	return (
 		<section
 			id='about'
-			className='w-full flex flex-col items-center justify-center'
+			className='w-full flex flex-col items-center justify-center bg-[#3b3561] '
 		>
-			<div className='flex bg-gray-200 py-4 px-20 justify-center w-full'>
+			<div className='flex py-4 px-20 justify-center w-full'>
 				{images.map((image, i) => (
 					<Image
 						key={i}
-						className='mx-4 hover:shadow-lg hover:shadow-gray-400 transition-shadow ease-linear'
+						className='mx-4'
 						src={image.src}
 						alt={image.alt}
 						width={50}
@@ -29,7 +29,7 @@ export function AboutMe() {
 				))}
 			</div>
 
-			<div className='py-4 flex flex-col items-center px-60 bg-no-repeat bg-center w-full bg-black'>
+			<div className='py-4 flex flex-col items-center px-60 w-full'>
 				<h2 className='font-bold text-4xl'>About me</h2>
 				<p className='font-semibold mt-4'>
 					I'm Felipe Saff, I'm 27 year old and I live in Cuiabá, Brazil. I
