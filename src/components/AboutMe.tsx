@@ -1,23 +1,14 @@
+import { icons } from '@/utils';
 import Image from 'next/image';
 
 export function AboutMe() {
-	const images: Array<{
-		src: string;
-		alt: string;
-	}> = [
-		{ src: '/icons/logo-javascript.svg', alt: 'JavaScript logo' },
-		{ src: '/icons/logo-react.svg', alt: 'ReactJS logo' },
-		{ src: '/icons/icons8-typescript.svg', alt: 'TypeScript logo' },
-		{ src: '/icons/logo-angular.svg', alt: 'Angular logo' },
-		{ src: '/icons/php-svgrepo-com.svg', alt: 'PHP logo' },
-	];
 	return (
 		<section
 			id='about'
-			className='w-full flex flex-col items-center justify-center bg-[#3b3561] '
+			className='w-full flex flex-col pb-20 items-center justify-center bg-gradient-to-bl from-gray-900 to-black'
 		>
 			<div className='flex py-4 px-20 justify-center w-full'>
-				{images.map((image, i) => (
+				{icons.map((image, i) => (
 					<Image
 						key={i}
 						className='mx-4'
@@ -30,8 +21,8 @@ export function AboutMe() {
 			</div>
 
 			<div className='py-4 flex flex-col items-center px-60 w-full'>
-				<h2 className='font-bold text-4xl'>About me</h2>
-				<p className='font-semibold mt-4'>
+				<h2 className='font-bold text-4xl mb-4'>About me</h2>
+				<p className='font-semibold'>
 					I'm Felipe Saff, I'm 27 year old and I live in Cuiabá, Brazil. I
 					started to learn about software development in 2020. In that time, I
 					was studying nutrition at the Federal University of Mato Grosso and I
