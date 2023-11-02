@@ -3,16 +3,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 export const MyProjects = () => {
 	return (
-		<div
+		<section
 			id='projects'
-			className='w-full flex flex-col items-center justify-center bg-gradient-to-br from-black to-gray-900'
+			className='w-full flex px-8 flex-col items-center justify-center bg-gradient-to-br from-black to-gray-900'
 		>
 			<h1 className='font-bold text-4xl mb-4'>My Projects</h1>
 			<div className='max-w-full flex flex-wrap justify-around items-center'>
 				{myProjectsItems.map((project, i) => (
 					<div
 						key={i}
-						className='w-72 mx-2 my-2 bg-[#34403a] rounded-lg p-4 flex flex-col items-center justify-center'
+						className='w-72 md:mx-2 my-2 bg-[#34403a] rounded-lg p-4 flex flex-col items-center justify-center'
 					>
 						<p className='font-bold text-xl text-white my-2'>{project.name}</p>
 						<Link href={project.livePreview} target='_blank'>
@@ -55,6 +55,6 @@ export const MyProjects = () => {
 					</div>
 				))}
 			</div>
-		</div>
+		</section>
 	);
 };

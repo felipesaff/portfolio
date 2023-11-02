@@ -5,9 +5,9 @@ export function AboutMe() {
 	return (
 		<section
 			id='about'
-			className='w-full flex flex-col pb-20 items-center justify-center bg-gradient-to-bl from-gray-900 to-black'
+			className='w-full flex flex-col pb-20 px-8 items-center justify-center bg-gradient-to-bl from-gray-900 to-black'
 		>
-			<div className='flex flex-wrap py-4 px-20 justify-evenly md:justify-center w-full'>
+			<div className='flex flex-wrap py-8 justify-evenly md:justify-center w-full'>
 				{icons.map((image, i) => (
 					<Image
 						key={i}
@@ -20,7 +20,7 @@ export function AboutMe() {
 				))}
 			</div>
 
-			<div className='py-4 flex flex-col items-center px-8 md:px-60 w-full'>
+			<div className='py-4 flex flex-col items-center md:px-60 w-full'>
 				<h2 className='font-bold text-4xl mb-4'>About me</h2>
 				<p className='font-semibold'>
 					I'm Felipe Saff, I'm 27 year old and I live in Cuiabá, Brazil. I
