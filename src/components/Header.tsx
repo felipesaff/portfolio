@@ -6,7 +6,6 @@ export function Header() {
 		{ title: 'Home', href: '#' },
 		{ title: 'About me', href: '#about' },
 		{ title: 'My projects', href: '#projects' },
-		{ title: 'Contact', href: '#contact' },
 	];
 	const socialItems: Array<{ src: string; alt: string; href: string }> = [
 		{
@@ -76,7 +75,9 @@ export function Header() {
 					</div>
 				</div>
 				<div className='w-1/2 flex justify-center items-center'>
-					<img
+					<Image
+						width={720}
+						height={720}
 						className='rounded-full w-1/2 shadow-[#04e824] shadow-xl'
 						src='/images/profile-pic.webp'
 						alt='Profile Photo'

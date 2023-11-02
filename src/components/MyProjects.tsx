@@ -1,4 +1,5 @@
 import { myProjectsItems } from '@/utils';
+import Image from 'next/image';
 export const MyProjects = () => {
 	return (
 		<div
@@ -13,7 +14,12 @@ export const MyProjects = () => {
 						className='w-72 mx-2 my-2 bg-[#34403a] rounded-md p-4 flex flex-col items-center justify-center'
 					>
 						<p className='font-bold text-xl text-white'>{project.name}</p>
-						<img src={project.thumb} alt={`${project.name}'s printscreen`} />
+						<Image
+							width={500}
+							height={500}
+							src={project.thumb}
+							alt={`${project.name}'s printscreen`}
+						/>
 						<div className='flex w-full justify-center flex-wrap my-4'>
 							{project.stack.map((tech, index) => (
 								<span
