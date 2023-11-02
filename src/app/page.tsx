@@ -4,7 +4,7 @@ import { MyProjects } from '@/components/MyProjects';
 
 export default function Home() {
 	return (
-		<main className='flex min-h-screen w-screen flex-col'>
+		<main className='flex w-screen max-w-full flex-col'>
 			<Header />
 			<AboutMe />
 			<MyProjects />

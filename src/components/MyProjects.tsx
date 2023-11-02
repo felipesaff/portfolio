@@ -1,5 +1,6 @@
 import { myProjectsItems } from '@/utils';
 import Image from 'next/image';
+import Link from 'next/link';
 export const MyProjects = () => {
 	return (
 		<div
@@ -11,15 +12,18 @@ export const MyProjects = () => {
 				{myProjectsItems.map((project, i) => (
 					<div
 						key={i}
-						className='w-72 mx-2 my-2 bg-[#34403a] rounded-md p-4 flex flex-col items-center justify-center'
+						className='w-72 mx-2 my-2 bg-[#34403a] rounded-lg p-4 flex flex-col items-center justify-center'
 					>
-						<p className='font-bold text-xl text-white'>{project.name}</p>
-						<Image
-							width={500}
-							height={500}
-							src={project.thumb}
-							alt={`${project.name}'s printscreen`}
-						/>
+						<p className='font-bold text-xl text-white my-2'>{project.name}</p>
+						<Link href={project.livePreview} target='_blank'>
+							<Image
+								className='rounded-lg'
+								width={500}
+								height={500}
+								src={project.thumb}
+								alt={`${project.name}'s printscreen`}
+							/>
+						</Link>
 						<div className='flex w-full justify-center flex-wrap my-4'>
 							{project.stack.map((tech, index) => (
 								<span
@@ -31,22 +35,22 @@ export const MyProjects = () => {
 							))}
 						</div>
 						<div className='flex justify-between w-full'>
-							<a
+							<Link
 								target='_blank'
 								href={project.repoLink}
 								className='flex-1 text-center hover:text-[#18ff6d]'
 								rel='noreferrer'
 							>
 								Repository
-							</a>
-							<a
+							</Link>
+							<Link
 								target='_blank'
 								href={project.livePreview}
 								className='flex-1 text-center hover:text-[#18ff6d]'
 								rel='noreferrer'
 							>
 								Live Preview
-							</a>
+							</Link>
 						</div>
 					</div>
 				))}
